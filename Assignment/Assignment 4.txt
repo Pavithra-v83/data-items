@@ -1,0 +1,30 @@
+1)What is closure in python?
+
+Ans:- If we access the parameter from outside function to inside function, this is called closure.
+
+2)What is Class in python
+
+Ans:- Class is a group-in for creating an object . It provides a means of bundling data and functionality together. 
+There will be default function called constructor.So whenever we create a object for a class this function(constructor)
+ is automatically called.
+
+3)How to instantiate a class in Python?
+All the classes have function called __init__() which is always excecuted when the class is being initiated.
+init method lets the class initialize the object attributes.
+
+4)What is self in Python?
+Ans:- self keyword is used to represent an object of the given class.
+eg:- If there are 2 objects say cat and dog having thier own properties. If there is no self argument
+ the same class cannot hold the information of both the objects.
+
+5)What is the __init__ method?
+Ans:- __init__ is a function used inside the class and it lets the class initialize the object properties.
+
+6)How do you implement inheritance in Python?
+Ans:- For inheritance ,we have to use the keyword or function super() in child class.
+
+7)How to access parent class inside child class in Python?
+Ans:- By using super function in child class. It calls the parent class constructor in child class.
+
+8)What is super().
+Ans:-Super is a function used for inheritance in Python. It gives access to properites of parent.

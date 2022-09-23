@@ -1,0 +1,80 @@
+"""
+Define a property that must have the same value for every class instance (object)
+
+If we have class instance then it remain same for all object instance.
+eg: 
+"""
+class College:
+    college_Name= "Patha Shala"
+    place = "Bengaluru"
+    pincode= 560028
+    def __init__(self,a,b):
+        self.dress=a 
+        self.name=b      
+    
+        
+
+student1=College("Red Uniform","Sarita")
+student2=College("Blue Uniform","Nita")
+student3=College("Green Uniform","Rekha")
+
+print("Student1 details= ",student1.name,",",student1.dress,",",College.college_Name,",",College.place,",",College.pincode)
+print("Student2 details = ",student2.name,",",student2.dress,College.college_Name,",",College.place,",",College.pincode)
+print("Student3 details = ",student3.name,",",student3.dress,",",College.college_Name,",",College.place,",",College.pincode)
+
+
+
+2) Create Class Vehicle, and inherit the class for creating
+	School Bus
+	Office Cab
+	Truck and
+	Tractor
+Use of atleast 4 Instace Variables and 2 Class Variables and 3 Methods
+
+
+class Vehicle():
+    vehicle_depo="Jayanagar"
+    agency= "SLN"
+
+    def __init__(self,a):
+        self.school_bus="Red bus"
+        print('my School bus is {}'.format(self.school_bus))
+
+    def _change_color(self,a):
+        self.school_bus=a
+        print('my School bus changed Red colour to {}'.format(self.school_bus))
+
+class prop():
+    def __init__(self,a,b):
+        self.office_cab="Yello_board_cab"
+        self.Truck="Big Truck"  
+    
+    
+class prop1(Vehicle,prop):
+    def __init__(self,a):
+        super().__init__(a=10)
+        prop.__init__(self,a=10,b=10)
+        self.Tractor="New_tractor" 
+        self.Truck="Small Truck"
+    
+    
+
+
+vehicle=prop1(10)
+vehicle1=prop1(7)
+
+print("Vehicle agency= ",vehicle.agency,", My Tractor is =", vehicle1.Tractor)
+#print("School Bus=",vehicle.school_bus)
+print("Vehicle depo place is= ", vehicle1.vehicle_depo, "  Vehicle Truck= ",vehicle.Truck)
+print("Vehicle Tractor= ",vehicle.Tractor)
+print("Office cab= ",vehicle.office_cab)   
+
+vehicle._change_color('White')
+#print(vehicle.school_bus)
+print("Vehicle Truck= ",vehicle.Truck)  #overriding
+
+
+del vehicle.Truck   #delete method- 
+print("Vehicle Truck= ",vehicle.Truck)
+
+
