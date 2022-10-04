@@ -1,9 +1,8 @@
-"""
 Define a property that must have the same value for every class instance (object)
 
 If we have class instance then it remain same for all object instance.
 eg: 
-"""
+
 class College:
     college_Name= "Patha Shala"
     place = "Bengaluru"
@@ -40,15 +39,13 @@ class Vehicle():
         self.school_bus="Red bus"
         print('my School bus is {}'.format(self.school_bus))
 
-    def _change_color(self,a):
-        self.school_bus=a
-        print('my School bus changed Red colour to {}'.format(self.school_bus))
-
 class prop():
     def __init__(self,a,b):
         self.office_cab="Yello_board_cab"
         self.Truck="Big Truck"  
-    
+     
+    def change_color(self,a):
+        self.Truck=a
     
 class prop1(Vehicle,prop):
     def __init__(self,a):
@@ -56,25 +53,25 @@ class prop1(Vehicle,prop):
         prop.__init__(self,a=10,b=10)
         self.Tractor="New_tractor" 
         self.Truck="Small Truck"
-    
-    
+        self.school_bus="Green long bus"  # updat
 
-
+    def change_color(self,a):
+        self.Tractor=a
+    
+            
 vehicle=prop1(10)
 vehicle1=prop1(7)
 
+
 print("Vehicle agency= ",vehicle.agency,", My Tractor is =", vehicle1.Tractor)
-#print("School Bus=",vehicle.school_bus)
+print("School Bus=",vehicle.school_bus)
 print("Vehicle depo place is= ", vehicle1.vehicle_depo, "  Vehicle Truck= ",vehicle.Truck)
-print("Vehicle Tractor= ",vehicle.Tractor)
+print("Vehicle Tractor= ",vehicle.Tractor) 
 print("Office cab= ",vehicle.office_cab)   
+vehicle.change_color("changed color Tractor")
+print(vehicle.Tractor) # overriding
+print("Vehicle Truck= ",vehicle.Truck)  #updation
 
-vehicle._change_color('White')
-#print(vehicle.school_bus)
-print("Vehicle Truck= ",vehicle.Truck)  #overriding
-
-
-del vehicle.Truck   #delete method- 
-print("Vehicle Truck= ",vehicle.Truck)
-
-
+some=prop(10,7)
+del some #delete method- 
+print(some)
